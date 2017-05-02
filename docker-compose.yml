@@ -11,6 +11,6 @@ services:
     cpuset: '0'
     mem_limit: 512M
     volumes:
-      - /dev/shm:/dev/shm
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - ${XAUTHORITY}:/tmp/.docker.xauth:ro
+      - /dev/shm:/dev/shm:Z
+      - /tmp/.X11-unix:/tmp/.X11-unix:Z
+      - ${XAUTHORITY}:/tmp/.docker.xauth:ro,Z
